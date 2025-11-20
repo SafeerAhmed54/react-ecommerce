@@ -15,25 +15,37 @@
   - Configure basic routing setup in App.jsx
   - _Requirements: 1.1, 1.2_
 
-- [ ] 2. Build Day 1: Foundation components and learning materials
-  - [ ] 2.1 Create Header component with navigation links and cart icon
+- [x] 2. Build Day 1: Foundation components and learning materials
+
+
+
+
+  - [x] 2.1 Create Header component with navigation links and cart icon
+
+
     - Implement Header.jsx with props for cartItemCount, isLoggedIn, userName
     - Add navigation links to Home, Cart, Login/Signup
     - Style with basic CSS
     - _Requirements: 1.2, 1.3_
   
-  - [ ] 2.2 Create Footer component
+  - [x] 2.2 Create Footer component
+
+
     - Implement static Footer.jsx with copyright and placeholder links
     - Add basic styling
     - _Requirements: 1.2_
   
-  - [ ] 2.3 Create initial ProductCard component
+  - [x] 2.3 Create initial ProductCard component
+
+
     - Implement ProductCard.jsx with props (id, name, price, image)
     - Add basic card layout with image, title, price
     - Include "View Details" button placeholder
     - _Requirements: 1.2, 1.3_
   
-  - [ ] 2.4 Create Day 1 learning documentation
+  - [x] 2.4 Create Day 1 learning documentation
+
+
     - Write explanation document covering React basics, JSX, components, and props
     - Create 5 practical tasks (modify Header, create new component, pass props, style components, add prop validation)
     - Generate quiz with 8 questions on React fundamentals

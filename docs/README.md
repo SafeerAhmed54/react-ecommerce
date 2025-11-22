@@ -20,9 +20,12 @@ This project teaches React fundamentals through hands-on development:
 **Components Built:** Header, Footer, ProductCard  
 [View Day 1 Documentation](./day1-foundation.md)
 
-### Day 2: Product Listing (Coming Soon)
-**Topics:** useState hook, list rendering, filtering  
-**Components:** ProductList, Home page
+### ✅ Day 2: Product Listing with State Management
+**Status:** Complete  
+**Topics:** useState hook, list rendering, filtering, sorting, event handling  
+**Components Built:** ProductList, Home page  
+**Data:** Product catalog with 12 sample products  
+[View Day 2 Documentation](./day2-state-management.md)
 
 ### Day 3: Product Details (Coming Soon)
 **Topics:** React Router, navigation, useParams  
@@ -115,8 +118,8 @@ A fully functional ecommerce website with:
 
 ## 📝 Progress Tracking
 
-- [ ] Day 1: Foundation Components ✅
-- [ ] Day 2: Product Listing
+- [x] Day 1: Foundation Components ✅
+- [x] Day 2: Product Listing ✅
 - [ ] Day 3: Product Details
 - [ ] Day 4: Shopping Cart
 - [ ] Day 5: Authentication

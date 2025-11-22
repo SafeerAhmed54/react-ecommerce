@@ -51,24 +51,37 @@
     - Generate quiz with 8 questions on React fundamentals
     - _Requirements: 1.3, 1.4, 1.5, 8.1, 8.2, 8.3, 8.4_
 
-- [ ] 3. Build Day 2: Product listing with state management
-  - [ ] 3.1 Create product data file
+- [x] 3. Build Day 2: Product listing with state management
+
+
+
+
+
+
+  - [x] 3.1 Create product data file
+
     - Create products.js with array of 12 sample products
     - Include all required fields (id, name, price, description, image, category, inStock, rating)
     - _Requirements: 2.1, 8.1_
   
-  - [ ] 3.2 Implement ProductList component with state
+
+  - [x] 3.2 Implement ProductList component with state
+
     - Create ProductList.jsx using useState to manage products array
     - Implement grid layout rendering ProductCard components
     - Add filter/sort functionality (by category or price)
     - _Requirements: 2.1, 2.2, 2.3_
   
-  - [ ] 3.3 Create Home page component
+
+  - [x] 3.3 Create Home page component
+
     - Implement Home.jsx that renders ProductList
     - Add page title and introductory text
     - _Requirements: 2.1, 8.1_
   
-  - [ ] 3.4 Create Day 2 learning documentation
+  - [x] 3.4 Create Day 2 learning documentation
+
+
     - Write explanation covering useState hook, array mapping, keys, and event handling
     - Create 5 tasks (add search filter, implement sorting, add category badges, create loading state, add product count display)
     - Generate quiz with 8 questions on state management and list rendering

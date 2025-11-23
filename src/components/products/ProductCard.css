@@ -66,6 +66,7 @@
 }
 
 .btn-view-details {
+  display: block;
   width: 100%;
   padding: 0.75rem;
   background-color: #3498db;
@@ -76,6 +77,8 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-view-details:hover {

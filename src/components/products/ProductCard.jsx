@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './ProductCard.css'
 
 /**
@@ -9,7 +10,7 @@ import './ProductCard.css'
  * This component demonstrates:
  * - Receiving props from parent components
  * - Displaying dynamic data
- * - Basic event handling
+ * - Using Link component for navigation (Day 3)
  * 
  * @param {Object} props - Component props
  * @param {string} props.id - Unique product identifier
@@ -18,11 +19,6 @@ import './ProductCard.css'
  * @param {string} props.image - URL or path to product image
  */
 function ProductCard({ id, name, price, image }) {
-  // Event handler for the View Details button
-  const handleViewDetails = () => {
-    console.log(`View details for product: ${id}`)
-    // Navigation will be implemented in Day 3 with React Router
-  }
 
   return (
     <div className="product-card">
@@ -42,12 +38,9 @@ function ProductCard({ id, name, price, image }) {
 
       {/* Action Button */}
       <div className="product-actions">
-        <button 
-          className="btn-view-details"
-          onClick={handleViewDetails}
-        >
+        <Link to={`/product/${id}`} className="btn-view-details">
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   )

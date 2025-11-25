@@ -27,13 +27,17 @@ This project teaches React fundamentals through hands-on development:
 **Data:** Product catalog with 12 sample products  
 [View Day 2 Documentation](./day2-state-management.md)
 
-### Day 3: Product Details (Coming Soon)
-**Topics:** React Router, navigation, useParams  
-**Components:** ProductDetailsPage
+### ✅ Day 3: Product Details and Routing
+**Status:** Complete  
+**Topics:** React Router, navigation, useParams, useNavigate  
+**Components Built:** ProductDetailsPage  
+[View Day 3 Documentation](./day3-routing-navigation.md)
 
-### Day 4: Shopping Cart (Coming Soon)
-**Topics:** Context API, complex state management  
-**Components:** Cart, CartItem, CartSummary
+### ✅ Day 4: Shopping Cart with Context API
+**Status:** Complete  
+**Topics:** Context API, useContext, provider pattern, complex state management  
+**Components Built:** CartContext, Cart, CartItem, CartSummary  
+[View Day 4 Documentation](./day4-cart-context.md)
 
 ### Day 5: Authentication (Coming Soon)
 **Topics:** Forms, controlled components, validation  
@@ -120,8 +124,8 @@ A fully functional ecommerce website with:
 
 - [x] Day 1: Foundation Components ✅
 - [x] Day 2: Product Listing ✅
-- [ ] Day 3: Product Details
-- [ ] Day 4: Shopping Cart
+- [x] Day 3: Product Details ✅
+- [x] Day 4: Shopping Cart ✅
 - [ ] Day 5: Authentication
 - [ ] Day 6: Responsive Design
 - [ ] Day 7: Deployment

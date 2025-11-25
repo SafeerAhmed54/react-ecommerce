@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { products } from '../data/products'
+import { useCart } from '../context/CartContext'
 import './ProductDetailsPage.css'
 
 /**
@@ -12,13 +13,16 @@ import './ProductDetailsPage.css'
  * - Finding data based on route parameters
  * - Conditional rendering for error states
  * - useNavigate hook for programmatic navigation
+ * - Using Context API for cart functionality
  * 
  * Day 3 Learning Focus: React Router and Navigation
+ * Day 4 Learning Focus: Context API and Cart Management
  */
 function ProductDetailsPage() {
   // Get the product ID from the URL parameter
   const { id } = useParams()
   const navigate = useNavigate()
+  const { addToCart } = useCart()
 
   // Find the product in our data array
   const product = products.find(p => p.id === id)
@@ -39,11 +43,10 @@ function ProductDetailsPage() {
     )
   }
 
-  // Handler for Add to Cart button (non-functional for now)
+  // Handler for Add to Cart button
   const handleAddToCart = () => {
-    console.log(`Adding product ${product.id} to cart`)
-    // Cart functionality will be implemented in Day 4
-    alert(`"${product.name}" will be added to cart (Day 4 feature)`)
+    addToCart(product)
+    alert(`"${product.name}" has been added to your cart!`)
   }
 
   return (

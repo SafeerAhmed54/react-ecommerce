@@ -98,3 +98,20 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
+
+/* Logout Button */
+.logout-button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}

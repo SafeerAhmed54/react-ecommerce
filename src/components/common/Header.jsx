@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../context/AuthContext'
 import './Header.css'
 
 /**
@@ -13,6 +14,11 @@ import './Header.css'
  * @param {string} props.userName - Name of the logged-in user
  */
 function Header({ cartItemCount = 0, isLoggedIn = false, userName = '' }) {
+  const { logout } = useAuth()
+
+  const handleLogout = () => {
+    logout()
+  }
   return (
     <header className="header">
       <div className="header-container">
@@ -39,6 +45,9 @@ function Header({ cartItemCount = 0, isLoggedIn = false, userName = '' }) {
           {isLoggedIn ? (
             <div className="user-info">
               <span className="user-name">Hello, {userName}</span>
+              <button onClick={handleLogout} className="logout-button">
+                Logout
+              </button>
             </div>
           ) : (
             <>

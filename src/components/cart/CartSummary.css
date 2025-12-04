@@ -77,9 +77,44 @@
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+/* Mobile: Adjusted spacing (below 640px) */
+@media (max-width: 640px) {
   .cart-summary {
     position: static;
-    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .cart-summary-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .summary-row {
+    margin-bottom: 0.75rem;
+  }
+
+  .summary-label,
+  .summary-value {
+    font-size: 0.95rem;
+  }
+
+  .summary-total .summary-label {
+    font-size: 1.1rem;
+  }
+
+  .summary-total .summary-value {
+    font-size: 1.3rem;
+  }
+
+  .checkout-btn {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet: Keep sticky behavior (640px - 1024px) */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .cart-summary {
+    position: static;
   }
 }

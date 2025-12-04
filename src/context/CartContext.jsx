@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react'
+import Toast from '../components/common/Toast'
 
 // Create the Cart Context
 const CartContext = createContext()
@@ -16,6 +17,19 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   // Cart state: array of cart items
   const [cart, setCart] = useState([])
+  
+  // Toast notification state
+  const [toast, setToast] = useState(null)
+
+  // Show toast notification
+  const showToast = (message, type = 'success') => {
+    setToast({ message, type })
+  }
+
+  // Close toast notification
+  const closeToast = () => {
+    setToast(null)
+  }
 
   // Add item to cart or increase quantity if already exists
   const addToCart = (product) => {
@@ -25,6 +39,7 @@ export const CartProvider = ({ children }) => {
       
       if (existingItem) {
         // Increase quantity if item exists
+        showToast(`Updated ${product.name} quantity in cart`, 'success')
         return prevCart.map(item =>
           item.productId === product.id
             ? { ...item, quantity: item.quantity + 1 }
@@ -32,6 +47,7 @@ export const CartProvider = ({ children }) => {
         )
       } else {
         // Add new item to cart
+        showToast(`${product.name} added to cart!`, 'success')
         return [
           ...prevCart,
           {
@@ -48,6 +64,10 @@ export const CartProvider = ({ children }) => {
 
   // Remove item from cart completely
   const removeFromCart = (productId) => {
+    const item = cart.find(item => item.productId === productId)
+    if (item) {
+      showToast(`${item.name} removed from cart`, 'info')
+    }
     setCart(prevCart => prevCart.filter(item => item.productId !== productId))
   }
 
@@ -100,6 +120,13 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider value={value}>
       {children}
+      {toast && (
+        <Toast
+          message={toast.message}
+          type={toast.type}
+          onClose={closeToast}
+        />
+      )}
     </CartContext.Provider>
   )
 }

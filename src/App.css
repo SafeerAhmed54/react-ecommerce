@@ -37,3 +37,28 @@
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
+/* Responsive Design */
+
+/* Mobile: Adjust main content padding (below 640px) */
+@media (max-width: 640px) {
+  .main-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .home-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .home-container p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Tablet: Adjust spacing (640px - 1024px) */
+@media (max-width: 1024px) and (min-width: 641px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+}

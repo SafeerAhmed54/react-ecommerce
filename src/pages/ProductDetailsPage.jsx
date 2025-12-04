@@ -58,6 +58,8 @@ function ProductDetailsPage() {
             src={product.image || 'https://via.placeholder.com/600x600?text=Product'} 
             alt={product.name}
             className="product-detail-image"
+            loading="lazy"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
           />
         </div>
 

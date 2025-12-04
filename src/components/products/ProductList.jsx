@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProductCard from './ProductCard'
 import './ProductList.css'
 
@@ -12,6 +12,7 @@ import './ProductList.css'
  * - Array mapping to render lists of components
  * - Event handling for filters and sorting
  * - Conditional rendering based on state
+ * - Loading states for better UX
  * 
  * @param {Object} props - Component props
  * @param {Array} props.products - Array of product objects
@@ -22,6 +23,18 @@ function ProductList({ products }) {
   
   // State for sort option
   const [sortBy, setSortBy] = useState('default')
+  
+  // State for loading
+  const [isLoading, setIsLoading] = useState(true)
+
+  // Simulate loading state
+  useEffect(() => {
+    setIsLoading(true)
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [products])
 
   // Get unique categories from products
   const categories = ['all', ...new Set(products.map(product => product.category))]
@@ -92,21 +105,36 @@ function ProductList({ products }) {
       </div>
 
       {/* Product Grid */}
-      <div className="product-grid">
-        {sortedProducts.length > 0 ? (
-          sortedProducts.map(product => (
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              price={product.price}
-              image={product.image}
-            />
-          ))
-        ) : (
-          <p className="no-products">No products found in this category.</p>
-        )}
-      </div>
+      {isLoading ? (
+        <div className="product-grid">
+          {[...Array(8)].map((_, index) => (
+            <div key={index} className="product-card-skeleton">
+              <div className="skeleton-image"></div>
+              <div className="skeleton-content">
+                <div className="skeleton-title"></div>
+                <div className="skeleton-price"></div>
+                <div className="skeleton-button"></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="product-grid">
+          {sortedProducts.length > 0 ? (
+            sortedProducts.map(product => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                name={product.name}
+                price={product.price}
+                image={product.image}
+              />
+            ))
+          ) : (
+            <p className="no-products">No products found in this category.</p>
+          )}
+        </div>
+      )}
     </div>
   )
 }

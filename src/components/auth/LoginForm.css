@@ -36,6 +36,8 @@
 .form-group input:focus {
   outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+  transform: translateY(-1px);
 }
 
 .form-group input.error {
@@ -78,6 +80,13 @@
 
 .submit-button:hover:not(:disabled) {
   background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
 }
 
 .submit-button:disabled {
@@ -98,4 +107,33 @@
 
 .form-footer a:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Mobile: Adjust padding and spacing (below 640px) */
+@media (max-width: 640px) {
+  .login-form {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group input {
+    padding: 0.625rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 0.625rem;
+    font-size: 0.95rem;
+  }
 }

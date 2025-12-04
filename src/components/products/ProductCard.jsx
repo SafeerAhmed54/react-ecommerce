@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import './ProductCard.css'
 
 /**
@@ -11,6 +12,7 @@ import './ProductCard.css'
  * - Receiving props from parent components
  * - Displaying dynamic data
  * - Using Link component for navigation (Day 3)
+ * - Lazy loading images for performance optimization
  * 
  * @param {Object} props - Component props
  * @param {string} props.id - Unique product identifier
@@ -19,14 +21,29 @@ import './ProductCard.css'
  * @param {string} props.image - URL or path to product image
  */
 function ProductCard({ id, name, price, image }) {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const [imageError, setImageError] = useState(false)
+
+  const placeholderImage = 'https://via.placeholder.com/300x200?text=Product'
+  const displayImage = image || placeholderImage
 
   return (
     <div className="product-card">
       {/* Product Image */}
       <div className="product-image">
+        {!imageLoaded && !imageError && (
+          <div className="image-placeholder"></div>
+        )}
         <img 
-          src={image || 'https://via.placeholder.com/300x200?text=Product'} 
+          src={imageError ? placeholderImage : displayImage}
           alt={name}
+          loading="lazy"
+          onLoad={() => setImageLoaded(true)}
+          onError={() => {
+            setImageError(true)
+            setImageLoaded(true)
+          }}
+          style={{ display: imageLoaded ? 'block' : 'none' }}
         />
       </div>
 

@@ -296,7 +296,11 @@
     - Include links to all quiz answers and task solutions
     - _Requirements: 8.4, 8.5_
   
-  - [ ]* 9.3 Create supplementary materials
+  - [-] 9.3 Create supplementary materials
+
+
+
+
     - Add cheat sheet for React hooks used in project
     - Create glossary of React terms
     - Include common error solutions guide

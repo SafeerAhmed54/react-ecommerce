@@ -296,7 +296,9 @@
     - Include links to all quiz answers and task solutions
     - _Requirements: 8.4, 8.5_
   
-  - [-] 9.3 Create supplementary materials
+  - [x] 9.3 Create supplementary materials
+
+
 
 
 

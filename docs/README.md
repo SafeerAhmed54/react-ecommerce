@@ -102,6 +102,14 @@ react-ecommerce-learning/
 └── package.json
 ```
 
+## 📚 Supplementary Materials
+
+Essential resources to support your learning:
+
+- **[React Hooks Cheat Sheet](./react-hooks-cheatsheet.md)** - Quick reference for all hooks used in this project
+- **[React Glossary](./react-glossary.md)** - Comprehensive definitions of React terms and concepts
+- **[Common Errors Guide](./common-errors-guide.md)** - Solutions to errors you might encounter
+
 ## 💡 Learning Tips
 
 - **Don't rush**: Take time to understand each concept
@@ -109,6 +117,7 @@ react-ecommerce-learning/
 - **Debug**: Use console.log() and React DevTools
 - **Ask questions**: Research concepts you don't understand
 - **Build along**: Type the code yourself, don't just copy-paste
+- **Use the supplementary materials**: Reference the cheat sheet and glossary as needed
 
 ## 🎓 What You'll Build
 
